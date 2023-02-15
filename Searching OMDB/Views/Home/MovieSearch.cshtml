@@ -3,13 +3,16 @@
 <form asp-action="MovieSearch" asp-method="post">
     <h1>Enter a Movie Title</h1>
     <input type="text" name="name"/>
-    <input type="submit"/>
+    <input type="submit" class="btn btn-danger btn-lg" />
 </form>
 
 @{
     if (Model != null)
     {
-        <h1>@Model.Title</h1>
-        <image src="@Model.Poster"/>
+        <div class="card" style="width:18rem" style="color:black">
+            <h1>@Model.Title</h1>
+            <image src="@Model.Poster" btn="primary"/>
+        </div>
+       
     }
 }

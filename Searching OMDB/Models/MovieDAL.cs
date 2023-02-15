@@ -9,8 +9,8 @@ namespace Searching_OMDB.Models
         {
             //adjust here
             //setup
-            string key = "d807eeb2";
-            string url = $"https://www.omdbapi.com/?t={name}&apikey={key}";
+            
+            string url = $"https://www.omdbapi.com/?t={name}&apikey={Secret.apikey}";
             //request
             WebRequest request = WebRequest.CreateHttp(url);
             WebResponse response = (HttpWebResponse)request.GetResponse();
